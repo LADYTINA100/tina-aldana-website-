@@ -1,0 +1,20 @@
+# Starter only: authentication must be configured before the editor works.
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/tina-aldana-website
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home page"
+        file: "content/home.yml"
+        fields:
+          - { label: "Artist name", name: "artist_name", widget: "string", default: "Tina Aldana" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Singer · Performer · Artist" }
+          - { label: "Biography", name: "biography", widget: "text" }
